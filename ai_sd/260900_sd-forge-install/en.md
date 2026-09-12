@@ -1,3 +1,8 @@
+---
+title: How to Install Stable Diffusion WebUI Forge Locally — A Beginner's Guide
+subtitle: A practical setup guide, with an eye on how you'll actually use Forge after the install.
+---
+
 This is a guide to installing Stable Diffusion Forge locally, with an eye on how you'll actually use it after the install is done. It's written for people who want to get Forge running first and pick up the background knowledge later.
 
 ## What Stable Diffusion Forge is
@@ -23,7 +28,7 @@ In other words, it's a strong option when you want to run Stable Diffusion on a 
 - **Memory**: 16GB or more
 - **Storage**: 100GB or more of free space recommended
 
-**A note on storage**: the program itself is around 10GB, but the "models" that generate the images are 2–7GB each, and they pile up as you use Forge. It's better to account for that and lay out your directory structure at install time. (See "Creating the directories" below for specifics.)
+Note: about storage — the program itself is around 10GB, but the "models" that generate the images are 2–7GB each, and they pile up as you use Forge. It's better to account for that and lay out your directory structure at install time. (See "Creating the directories" below for specifics.)
 
 ## Required software
 
@@ -39,11 +44,11 @@ The thing to watch out for is that newer isn't automatically better. Forge is bu
 
 Git was originally a platform for collaborating on projects such as application development — managing and sharing work and its history across multiple people to keep development running smoothly — but it's also used to distribute finished programs and projects to the public.
 
-Programs are uploaded to and shared from an area on GitHub's servers called a "repository." People working on a project pull the program from that repository down to their local machine, update or add to it, and push it back to the repository, and that's how the collaboration proceeds.
+Note: programs are uploaded to and shared from an area on GitHub's servers called a "repository." People working on a project pull the program from that repository down to their local machine, update or add to it, and push it back to the repository, and that's how the collaboration proceeds.
 
 Here, you need it to clone (download) Forge's program from its repository on GitHub to your local machine.
 
-**About installing Python and Git**: the zip package in "Installation method 1" already includes Python and Git, so if you install Forge from the zip, installing them beforehand isn't strictly required. But you do need them if you install from the repository via "Installation method 2," and with an eye toward how you'll use things going forward, this guide assumes you're installing Python and Git.
+Note: about installing Python and Git — the zip package in "Installation method 1" already includes Python and Git, so if you install Forge from the zip, installing them beforehand isn't strictly required. But you do need them if you install from the repository via "Installation method 2," and with an eye toward how you'll use things going forward, this guide assumes you're installing Python and Git.
 
 ## Creating the directories
 
@@ -141,28 +146,34 @@ Note: any Git version that runs on your computer is fine.
 
 The version to install is Python 3.10.x, and 3.10.6–3.10.9 seem to be the stable range.
 
-- Here, the example uses 3.10.9 — stable, and as recent as possible within that range.
-- Forge's Git repository documentation recommends 3.10.6, so that works too.
+Note: here, the example uses 3.10.9 — stable, and as recent as possible within that range.
 
-### Python 3.10.9 download page
+Note: Forge's Git repository documentation recommends 3.10.6, so that works too.
+
+### [Python 3.10.9 download page](https://www.python.org/downloads/release/python-3109/)
 
 In the "Files" section toward the bottom of the page, download the build that matches your environment.
 
-Note: since we're installing on a Windows PC here, choose "Windows installer (64-bit)."
+— Since we're installing on a Windows PC here, choose "Windows installer (64-bit)."
 
 **1. Launching the installer**
 
 Double-click the downloaded .exe file to launch the installer.
 
-Note: save the .exe anywhere you like and launch it from there.
+— Save the .exe anywhere you like and launch it from there.
 
 **2. Installing**
 
-Check the required boxes and start the install with "Install Now."
+— Check the required boxes and start the install with "Install Now."
 
-Checkbox: ☑ Add Python to PATH — this adds the path to Python to your environment variables. If you install and manage multiple Python versions, you can leave it unchecked.
+Note: the checkbox
 
-When the completion message appears, close the window to finish.
+☑ Add Python to PATH
+
+- Adds the path to Python to your environment variables.
+- If you install and manage multiple Python versions, you can leave it unchecked.
+
+— When the completion message appears, close the window to finish.
 
 **3. Verifying the install**
 
@@ -184,23 +195,23 @@ If the Python version is displayed like this, the install succeeded.
 
 For Git, any version that works should be fine.
 
-### Git download page
+### [Git download page](https://gitforwindows.org/)
 
 **1. Launching the installer**
 
 Double-click the downloaded .exe file to launch the installer.
 
-Note: save the .exe anywhere you like and launch it from there.
+— Save the .exe anywhere you like and launch it from there.
 
 **2. Installing**
 
-Follow the steps from "Next."
+— Follow the steps from "Next."
 
 There are more steps than the Python install, but you're basically clicking "Next" the whole way through.
 
-Once "Next" turns into "Install," the installation begins.
+— Once "Next" turns into "Install," the installation begins.
 
-When the completion message appears, close the window to finish.
+— When the completion message appears, close the window to finish.
 
 **3. Verifying the install**
 
@@ -224,17 +235,15 @@ With the groundwork — Git and Python — in place, it's time to install Stable
 
 First, go to the Git URL below.
 
-### stable-diffusion-webui-forge download page
+### [stable-diffusion-webui-forge download page](https://github.com/lllyasviel/stable-diffusion-webui-forge)
 
 ### Installation method 1: downloading and installing the zip file
 
 Toward the bottom of the repository page, under the "Installing Forge" section:
 
-Clicking the link downloads the zip file.
+— Clicking the link downloads the zip file.
 
-```
->>> Click Here to Download One-Click Package (CUDA 12.1 + Pytorch 2.3.1) <<<
-```
+[>>> Click Here to Download One-Click Package (CUDA 12.1 + Pytorch 2.3.1) <<<](https://github.com/lllyasviel/stable-diffusion-webui-forge/releases/download/latest/webui_forge_cu121_torch231.7z)
 
 Download it into `apps`, inside the AI app directory structure you prepared earlier.
 
@@ -250,7 +259,7 @@ webui_forge_cu121_torch231.7z
 
 From the "Code" button on the repository page, copy the HTTPS link and use `git clone` to clone the repository into `apps`, inside the AI app directory structure you prepared earlier.
 
-Note: copy the URL and clone.
+— Copy the URL and clone.
 
 Once it's installed, set it up with the steps below.
 
@@ -268,7 +277,11 @@ folder, click
 update.bat
 ```
 
-to launch it. A prompt opens and the download proceeds, so wait a while. When it finishes successfully and the prompt ends with
+to launch it.
+
+— `update.bat` is inside the installed folder.
+
+A prompt opens and the download proceeds, so wait a while. When it finishes successfully and the prompt ends with
 
 ```
 ... Press any key to continue
@@ -286,7 +299,7 @@ run.bat
 
 to launch it.
 
-Note: `run.bat` is inside the installed folder.
+— `run.bat` is inside the installed folder.
 
 If the Forge screen comes up in your browser, you've succeeded. Congratulations!
 
