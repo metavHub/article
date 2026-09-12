@@ -43,7 +43,7 @@ Programs are uploaded to and shared from an area on GitHub's servers called a "r
 
 Here, you need it to clone (download) Forge's program from its repository on GitHub to your local machine.
 
-**About installing Python and Git**: the zip package in "Installation method 1" actually bundles Python and Git, so if you install Forge from the zip, installing them beforehand isn't strictly required. But you do need them if you install from the repository via "Installation method 2," and with an eye toward how you'll use things going forward, this guide assumes you're installing Python and Git.
+**About installing Python and Git**: the zip package in "Installation method 1" already includes Python and Git, so if you install Forge from the zip, installing them beforehand isn't strictly required. But you do need them if you install from the repository via "Installation method 2," and with an eye toward how you'll use things going forward, this guide assumes you're installing Python and Git.
 
 ## Creating the directories
 
